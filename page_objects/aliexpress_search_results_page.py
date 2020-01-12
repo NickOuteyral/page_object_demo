@@ -1,15 +1,10 @@
 from selenium.webdriver.common.by import By
 
 from base_element import BaseElement
+from base_page import BasePage
 
 
-class AliExpressSearchResultsPage:
-
-    def __init__(self, driver):
-        self.driver = driver
-
-    def go(self):
-        self.driver.get(self.url)
+class AliExpressSearchResultsPage(BasePage):
 
     def pagination_button(self, page_index):
         element_path = ".//div[contains(@class, 'next-pagination-list')]/button[contains(@aria-label, 'Page %s')]" \
