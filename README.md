@@ -14,7 +14,9 @@ need to enable hidden folders to be visible
 
 You have two main ways of executing these tests. The first is by console commands, for which you'll need to open a console
 terminal, navigate to the download location of the repository and type `py test_aliexpress.py` in Windows. In MacOS and
-Linux it should be `python3 test_aliexpress.py`. The test result will be shown in the same console
+Linux it should be `python3 test_aliexpress.py`. The test result will be shown in the same console. Speaking of which, if 
+the scripts fails to run due to some chromedriver issues you should update the selenium on your pc with the `pip install
+ -U selenium` line
 
 The other option is to run it from a dev environment, such as PyCharm. If you want to edit the code and do things such as
 debugging, it's recommended. You can download a free edition of PyCharm at `https://www.jetbrains.com/pycharm/`

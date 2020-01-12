@@ -9,10 +9,7 @@ class TestAliExpress(unittest.TestCase):
 
     def setUp(self):
 
-        try:
-            self.chrome = webdriver.Chrome('drivers/chromedriver')
-        except:
-            self.chrome = webdriver.Chrome(executable_path=r'C:\Windows\chromedriver.exe')
+        self.chrome = webdriver.Chrome('drivers/chromedriver.exe')
         self.chrome.maximize_window()
 
         self.test_input_value = 'iPhone'
