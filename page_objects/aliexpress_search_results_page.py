@@ -25,3 +25,10 @@ class AliExpressSearchResultsPage(BasePage):
         by = By.XPATH
 
         return BaseElement(driver=self.driver, element_path=element_path, by=by)
+
+    @property
+    def dialog_popup_close_button(self):
+        element_path = ".//a[contains(@class, 'next-dialog-close')]"
+        by = By.XPATH
+
+        return BaseElement(driver=self.driver, element_path=element_path, by=by)

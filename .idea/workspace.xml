@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="527c4fcb-4855-4da9-911a-86b59a48aab9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_objects/aliexpress_search_results_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/aliexpress_search_results_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_objects/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_aliexpress.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_aliexpress.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

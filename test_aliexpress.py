@@ -35,6 +35,11 @@ class TestAliExpress(unittest.TestCase):
         search_results.results_list.find()
         search_results.scroll_to_bottom()
 
+        try:
+            search_results.dialog_popup_close_button.click()
+        except:
+            pass
+
     def tearDown(self):
 
         pass
