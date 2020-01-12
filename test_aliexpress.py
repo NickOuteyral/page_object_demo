@@ -2,6 +2,7 @@ from selenium import webdriver
 import unittest
 
 from page_objects.aliexpress_landing_page import AliExpressLandingPage
+from page_objects.aliexpress_search_results_page import AliExpressSearchResultsPage
 
 
 class TestAliExpress(unittest.TestCase):
@@ -28,6 +29,11 @@ class TestAliExpress(unittest.TestCase):
         landing.search_input.click()
         landing.search_input.send_keys(self.test_input_value)
         landing.submit_button.click()
+
+        search_results = AliExpressSearchResultsPage(driver=self.chrome)
+
+        search_results.results_list.find()
+        search_results.scroll_to_bottom()
 
     def tearDown(self):
 

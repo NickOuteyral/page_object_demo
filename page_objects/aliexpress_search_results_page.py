@@ -18,3 +18,10 @@ class AliExpressSearchResultsPage(BasePage):
         by = By.XPATH
 
         return BaseElement(driver=self.driver, element_path=element_path, by=by)
+
+    @property
+    def results_list(self):
+        element_path = ".//div[contains(@class, 'list product-card')]"
+        by = By.XPATH
+
+        return BaseElement(driver=self.driver, element_path=element_path, by=by)
