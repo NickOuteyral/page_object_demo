@@ -9,10 +9,8 @@ class TestAliExpress(unittest.TestCase):
 
     def setUp(self):
 
-        options = webdriver.ChromeOptions()
-        options.add_argument("--start-maximized")
-
-        self.chrome = webdriver.Chrome('drivers/chromedriver', chrome_options=options)
+        self.chrome = webdriver.Chrome('drivers/chromedriver')
+        self.chrome.maximize_window()
 
         self.test_input_value = 'iPhone'
         self.element_index = 1
@@ -35,18 +33,26 @@ class TestAliExpress(unittest.TestCase):
         search_results = AliExpressSearchResultsPage(driver=self.chrome)
 
         search_results.results_list.find()
-        search_results.scroll_to_bottom()
 
-        try:
-            search_results.dialog_popup_close_button.click()
-        except:
-            pass
+        if self.page_index != 1:
+            search_results.scroll_to_bottom()
 
-        if self.page_index <= 7 or self.page_index > 1:
-            search_results.pagination_button(self.page_index).click()
+            try:
+                search_results.dialog_popup_close_button.click()
+            except:
+                pass
+
+            if self.page_index <= 7 or self.page_index > 0:
+                search_results.pagination_button(self.page_index).click()
+            else:
+                print("\nPlease select a page index between 2 and 7")
+                raise SystemError('\npage index error')
+
         else:
-            print("\nPlease select a page index between 2 and 7")
-            raise SystemError('\npage index error')
+            try:
+                search_results.dialog_popup_close_button.click()
+            except:
+                pass
 
         search_results_list = search_results.results_list.several()
         assert len(search_results_list) > 1
