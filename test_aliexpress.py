@@ -42,13 +42,22 @@ class TestAliExpress(unittest.TestCase):
         except:
             pass
 
-        search_results.pagination_button(self.page_index).click()
+        if self.page_index <= 7 or self.page_index > 1:
+            search_results.pagination_button(self.page_index).click()
+        else:
+            print("\nPlease select a page index between 2 and 7")
+            raise SystemError('\npage index error')
+
         search_results_list = search_results.results_list.several()
         assert len(search_results_list) > 1
 
-        items_sold = search_results.result_element_sales(self.element_index).text().split(' ')
-        items_sold_int = int(items_sold[0])
-        assert items_sold_int > 0, 'result in index %s does not have any sales' % self.element_index
+        try:
+            items_sold = search_results.result_element_sales(self.element_index).text().split(' ')
+            items_sold_int = int(items_sold[0])
+            assert items_sold_int > 0, '\nResult in index %s does not have any sales' % self.element_index
+            print("\nThe element at index %s has %s sales" % (self.element_index, items_sold_int))
+        except:
+            print('\nResult in index %s does not have any sales or the sales field is broken' % self.element_index)
 
     def tearDown(self):
         self.chrome.quit()
