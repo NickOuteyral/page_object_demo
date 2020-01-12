@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="527c4fcb-4855-4da9-911a-86b59a48aab9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/page_objects/aliexpress_landing_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/aliexpress_landing_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_objects/base_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_objects/base_element.py" afterDir="false" />
-    </list>
+    <list default="true" id="527c4fcb-4855-4da9-911a-86b59a48aab9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +35,27 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hoordyn.000\Desktop\projects\page_object_demo\drivers" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unittests in test_aliexpress.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="page_object_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_aliexpress.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests in test_aliexpress.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
