@@ -15,7 +15,7 @@ class BaseElement(object):
         self.find()
 
     def find(self):
-        self.web_element = WebDriverWait(self.driver, 10).until(EC.invisibility_of_element(locator=self.locator))
+        self.web_element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator=self.locator))
         return None
 
     def click(self):

@@ -44,9 +44,14 @@ class TestAliExpress(unittest.TestCase):
         search_results_list = search_results.results_list.several()
         assert len(search_results_list) > 1
 
+        items_sold = search_results.result_element_sales(1).text().split(' ')
+        items_sold_int = int(items_sold[0])
+        assert items_sold_int > 0, 'result in index 1 does not have any sales'
+
     def tearDown(self):
 
         pass
+
 
 if __name__ == '__main__':
     unittest.main()

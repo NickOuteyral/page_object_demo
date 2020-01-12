@@ -10,8 +10,8 @@ class AliExpressLandingPage(BasePage):
 
     @property
     def search_input(self):
-        element_path = 'search-key'
-        by = By.ID
+        element_path = ".//input[@id='search-key']"
+        by = By.XPATH
 
         return BaseElement(driver=self.driver, element_path=element_path, by=by)
 
