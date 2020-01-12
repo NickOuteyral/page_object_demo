@@ -32,3 +32,9 @@ class BaseElement(object):
     def text(self):
         text = self.web_element.text
         return text
+
+    def several(self):
+        self.web_element = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_any_elements_located(locator=self.locator))
+
+        return self.driver.find_elements(by=self.by, value=self.element_path)

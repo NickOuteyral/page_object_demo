@@ -40,6 +40,10 @@ class TestAliExpress(unittest.TestCase):
         except:
             pass
 
+        search_results.pagination_button(2).click()
+        search_results_list = search_results.results_list.several()
+        assert len(search_results_list) > 1
+
     def tearDown(self):
 
         pass
