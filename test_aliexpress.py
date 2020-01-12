@@ -15,7 +15,8 @@ class TestAliExpress(unittest.TestCase):
 
     def test_elements_sold(self):
 
-        pass
+        landing = AliExpressLandingPage(driver=self.chrome)
+        landing.go()
 
     def tearDown(self):
 
