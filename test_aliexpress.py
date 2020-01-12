@@ -15,6 +15,8 @@ class TestAliExpress(unittest.TestCase):
         self.chrome = webdriver.Chrome('drivers/chromedriver', chrome_options=options)
 
         self.test_input_value = 'iPhone'
+        self.element_index = 1
+        self.page_index = 2
 
     def test_elements_sold(self):
 
@@ -40,17 +42,16 @@ class TestAliExpress(unittest.TestCase):
         except:
             pass
 
-        search_results.pagination_button(2).click()
+        search_results.pagination_button(self.page_index).click()
         search_results_list = search_results.results_list.several()
         assert len(search_results_list) > 1
 
-        items_sold = search_results.result_element_sales(1).text().split(' ')
+        items_sold = search_results.result_element_sales(self.element_index).text().split(' ')
         items_sold_int = int(items_sold[0])
-        assert items_sold_int > 0, 'result in index 1 does not have any sales'
+        assert items_sold_int > 0, 'result in index %s does not have any sales' % self.element_index
 
     def tearDown(self):
-
-        pass
+        self.chrome.quit()
 
 
 if __name__ == '__main__':
